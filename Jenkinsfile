@@ -1,6 +1,6 @@
 pipeline {
   agent {
-#    docker 'node:7.10-alpine'
+//    docker 'node:7.10-alpine'
      any
   }
   stages {
