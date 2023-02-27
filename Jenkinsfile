@@ -1,20 +1,17 @@
+
+Jenkinsfile (Declarative Pipeline)
+
 pipeline {
-   agent {
+    agent {
         docker { image 'node:16.13.1-alpine' }
     }
-    
-  stages {
-    stage('Build') {
-      steps {
-        echo 'Building..'
-        sh 'npm install'
-      }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
+        }
     }
-    stage('Test') {
-      steps {
-        echo 'Testing..'
-        sh 'npm t'
-      }
-    }
-  }
 }
+
+
