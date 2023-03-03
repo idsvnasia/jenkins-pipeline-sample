@@ -3,7 +3,7 @@ Jenkinsfile
 
 pipeline {
     agent {
-        docker { image 'node:16.13.1-alpine' }
+        docker { image 'node:18' }
     }
   
    stages {
@@ -11,6 +11,7 @@ pipeline {
       steps {
         echo 'Building..'
         sh 'npm install'
+        sh 'npm start'
       }
     }
     stage('Test') {
